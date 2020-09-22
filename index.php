@@ -70,3 +70,8 @@ and open the template in the editor.
     </body>
 </html>
 
+<style type="text/css">
+    body{text-align: center;}
+    *{font-size: 30px;
+      color: red;}
+</style>
