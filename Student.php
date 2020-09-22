@@ -15,9 +15,11 @@ class Student {
     function __construct() { 
         $this->surname = ''; 
         $this->first_name = ''; 
+        $this->status = '';
         $this->emails = array(); 
         $this->grades = array(); 
     }
+
     
     function add_email($which,$address) { 
         $this->emails[$which] = $address;     
@@ -35,7 +37,7 @@ class Student {
     } 
     
     function toString() { 
-        $result = $this->first_name . ' ' . $this->surname; 
+        $result = $this->first_name . ' ' . $this->surname. "\n" . $this->status; 
         $result .= ' ('.$this->average().")\n"; 
         foreach($this->emails as $which=>$what) 
             $result .= $which . ': '. $what. "\n"; 
